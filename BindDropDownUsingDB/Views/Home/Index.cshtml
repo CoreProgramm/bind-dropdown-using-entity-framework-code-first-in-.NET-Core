@@ -1,0 +1,17 @@
+﻿
+@model BindDropDownUsingDB.Models.Department
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="row">
+    <div class="col-md-3">
+        <label asp-for="DeptName"></label>
+    </div>
+    <div class="col-md-5">
+        <select asp-for="DeptId"
+                asp-items="@( new SelectList(ViewBag.Departments,"DeptId","DeptName"))" 
+                class="form-control"></select>
+    </div>
+</div>
+
+
